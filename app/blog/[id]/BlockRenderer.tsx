@@ -18,25 +18,36 @@ export default function BlockRenderer({ blocks = [] }: BlockRendererProps) {
         switch (block.__component) {
           case "shared.rich-text":
             return (
-              <div
-                key={index}
-                className="
-  prose prose-lg max-w-none
-  prose-headings:text-[#0E1116]
-  prose-headings:font-bold
-  prose-p:!text-[#0E1116]
-  prose-p:leading-8
-  prose-strong:!text-[#0E1116]
-  prose-a:!text-[#0E1116]
-  prose-a:underline
-  prose-a:decoration-[#C8FF4D]
-  prose-a:decoration-2
-  prose-a:underline-offset-2
-  prose-blockquote:!text-[#0E1116]
-"
-              >
-                <ReactMarkdown>{block.body}</ReactMarkdown>
-              </div>
+             <div
+  key={index}
+  className="
+    prose
+    prose-lg
+    max-w-none
+
+    [&_*]:text-black
+    [&_strong]:text-black
+    [&_em]:text-black
+    [&_li]:text-black
+    [&_ol]:text-black
+    [&_ul]:text-black
+    [&_blockquote]:text-black
+    [&_code]:text-black
+    [&_pre]:text-black
+    [&_h1]:text-black
+    [&_h2]:text-black
+    [&_h3]:text-black
+    [&_h4]:text-black
+    [&_h5]:text-black
+    [&_h6]:text-black
+
+    [&_a]:text-black
+    [&_a]:underline
+    [&_a]:decoration-[#C8FF4D]
+  "
+>
+  <ReactMarkdown>{block.body}</ReactMarkdown>
+</div>
             );
 
           case "shared.quote":
