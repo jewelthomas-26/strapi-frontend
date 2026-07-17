@@ -3,7 +3,7 @@
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 
-const STRAPI_URL = "http://192.168.1.104:1337";
+const STRAPI_URL = "https://13.49.66.119.sslip.io";
 
 interface BlockRendererProps {
   blocks?: any[];
